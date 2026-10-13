@@ -16,12 +16,26 @@ from backend.app.models.analisis_ia import AnalisisIADB
 
 Base.metadata.create_all(bind=engine)
 
-
 app = FastAPI(
     title="EcoGuardianAI",
     description="API para gestión ambiental, residuos y riesgos naturales.",
     version="1.0.0"
 )
+
+origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "https://ecoguardia-web.onrender.com",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 # Carpeta para servir las fotografías de los reportes
 BASE_DIR = Path(__file__).resolve().parents[2]
@@ -39,7 +53,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "http://127.0.0.1:5173"
+        "http://127.0.0.1:5173",
+        "https://ecoguardia-web.onrender.com",
     ],
     allow_credentials=True,
     allow_methods=["*"],
