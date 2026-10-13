@@ -218,7 +218,7 @@ function App() {
   async function obtenerReportes() {
     try {
       const respuesta = await fetch(
-        "http://127.0.0.1:8000/reportes/"
+        "https://ecoguardia-api.onrender.com/reportes/"
       )
 
       if (!respuesta.ok) {
@@ -242,7 +242,7 @@ function App() {
   async function obtenerHistorialIA() {
     try {
       const respuesta = await fetch(
-        "http://127.0.0.1:8000/ia/historial"
+        "https://ecoguardia-api.onrender.com/ia/historial"
       )
 
       if (!respuesta.ok) {
@@ -272,7 +272,7 @@ function App() {
       parametros.append("estado", nuevoEstado)
 
       const respuesta = await fetch(
-        `http://127.0.0.1:8000/reportes/${reporteId}/estado?${parametros.toString()}`,
+        `https://ecoguardia-api.onrender.com/reportes/${reporteId}/estado?${parametros.toString()}`,
         {
           method: "PUT"
         }
@@ -308,7 +308,7 @@ function App() {
 
     try {
       const respuesta = await fetch(
-        `http://127.0.0.1:8000/reportes/${reporteId}`,
+        `https://ecoguardia-api.onrender.com/reportes/${reporteId}`,
         { method: "DELETE" }
       )
 
@@ -394,7 +394,7 @@ function App() {
       });
 
       const respuesta = await fetch(
-        `http://127.0.0.1:8000/geocodificar/?${parametros.toString()}`
+        `https://ecoguardia-api.onrender.com/geocodificar/?${parametros.toString()}`
       );
 
       const datos = await respuesta.json();
@@ -485,7 +485,7 @@ function App() {
 
     try {
       const respuesta = await fetch(
-        "http://127.0.0.1:8000/ia/clasificar",
+        "https://ecoguardia-api.onrender.com/ia/clasificar",
         {
           method: "POST",
           headers: {
@@ -593,7 +593,7 @@ function App() {
       }
 
       const respuesta = await fetch(
-        `http://127.0.0.1:8000/reportes/?${parametros.toString()}`,
+        `https://ecoguardia-api.onrender.com/reportes/?${parametros.toString()}`,
         {
           method: "POST",
           body: datosFormulario
@@ -2157,13 +2157,13 @@ function App() {
                             <div className="reporte-foto-evidencia">
                               <span>Fotografía de evidencia</span>
                               <a
-                                href={`http://127.0.0.1:8000${reporte.foto_url}`}
+                                href={`https://ecoguardia-api.onrender.com${reporte.foto_url}`}
                                 target="_blank"
                                 rel="noreferrer"
                                 title="Ver fotografía completa"
                               >
                                 <img
-                                  src={`http://127.0.0.1:8000${reporte.foto_url}`}
+                                  src={`https://ecoguardia-api.onrender.com${reporte.foto_url}`}
                                   alt={`Evidencia del reporte ${reporte.id}`}
                                   loading="lazy"
                                 />

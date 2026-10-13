@@ -25,7 +25,7 @@ function Admin({
 
       // Consultar el historial completo de análisis de IA.
       const respuestaIA = await fetch(
-        "http://127.0.0.1:8000/ia/historial"
+        "https://ecoguardia-api.onrender.com/ia/historial"
       );
 
       if (!respuestaIA.ok) {
@@ -332,7 +332,7 @@ function Admin({
 
     try {
       const respuesta = await fetch(
-        "http://127.0.0.1:8000/ia/clasificar",
+        "https://ecoguardia-api.onrender.com/ia/clasificar",
         {
           method: "POST",
           headers: {
@@ -556,13 +556,13 @@ function Admin({
                 <div className="reporte-foto-evidencia">
                   <span>Fotografía de evidencia</span>
                   <a
-                    href={`http://127.0.0.1:8000${reporte.foto_url}`}
+                    href={`https://ecoguardia-api.onrender.com${reporte.foto_url}`}
                     target="_blank"
                     rel="noreferrer"
                     title="Ver fotografía completa"
                   >
                     <img
-                      src={`http://127.0.0.1:8000${reporte.foto_url}`}
+                      src={`https://ecoguardia-api.onrender.com${reporte.foto_url}`}
                       alt={`Evidencia del reporte ${reporte.id}`}
                       loading="lazy"
                     />
