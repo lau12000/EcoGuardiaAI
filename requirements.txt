@@ -6,3 +6,6 @@ sqlalchemy
 pydantic
 email-validator
 python-dotenv
+
+joblib
+scikit-learn
