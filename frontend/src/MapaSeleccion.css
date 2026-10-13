@@ -1,0 +1,69 @@
+
+.selector-mapa {
+  width: 100%;
+  margin: 18px 0;
+  padding: 16px;
+  border: 1px solid #dce7df;
+  border-radius: 14px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.selector-mapa-encabezado h3 {
+  margin: 0 0 8px;
+  color: #205c38;
+  font-size: 1.08rem;
+}
+
+.selector-mapa-encabezado p,
+.selector-mapa-ayuda {
+  margin: 0 0 12px;
+  color: #526257;
+  line-height: 1.5;
+}
+
+.mapa-seleccion {
+  width: 100%;
+  height: 360px;
+  min-height: 300px;
+  z-index: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.selector-mapa-pie {
+  padding-top: 12px;
+}
+
+.selector-mapa-coordenadas {
+  margin: 0 0 8px;
+  color: #1e462d;
+  overflow-wrap: anywhere;
+}
+
+.selector-mapa-ayuda {
+  font-size: 0.92rem;
+}
+
+.selector-mapa-limpiar {
+  border: 1px solid #c74b4b;
+  border-radius: 8px;
+  padding: 9px 12px;
+  background: #fff;
+  color: #a52e2e;
+  cursor: pointer;
+}
+
+.selector-mapa-limpiar:hover {
+  background: #fff2f2;
+}
+
+@media (max-width: 600px) {
+  .selector-mapa {
+    padding: 10px;
+  }
+
+  .mapa-seleccion {
+    height: 300px;
+  }
+}

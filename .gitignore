@@ -1,0 +1,30 @@
+# Entorno y archivos de Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Dependencias y compilación del frontend
+node_modules/
+dist/
+
+# Bases de datos locales y respaldos
+*.db
+*.sqlite
+*.sqlite3
+
+# Variables y secretos
+.env
+.env.*
+!.env.example
+
+# Archivos temporales
+.DS_Store
+Thumbs.db
+
+# Archivos cargados por usuarios
+uploads/
+respaldo_fotos/
+
+# Caché del modelo
+__pycache__/
