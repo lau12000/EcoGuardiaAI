@@ -10,6 +10,18 @@ import {
 
 import "leaflet/dist/leaflet.css"
 
+import L from "leaflet"
+
+import iconoMarcador from "leaflet/dist/images/marker-icon.png"
+import iconoMarcador2x from "leaflet/dist/images/marker-icon-2x.png"
+import sombraMarcador from "leaflet/dist/images/marker-shadow.png"
+
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: iconoMarcador2x,
+  iconUrl: iconoMarcador,
+  shadowUrl: sombraMarcador
+})
+
 const CENTRO_MANRIQUE = [6.263, -75.565]
 
 function CentrarMapa({ reportes }) {
