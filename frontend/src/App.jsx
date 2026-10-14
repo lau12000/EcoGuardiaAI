@@ -602,9 +602,13 @@ function App() {
 
       const datos = await respuesta.json()
 
+
       if (!respuesta.ok) {
-        throw new Error("No se pudo registrar el reporte")
+        throw new Error(
+          datos.detail || datos.mensaje || `Error del servidor (${respuesta.status})`
+        )
       }
+
 
       setMensaje("Reporte registrado correctamente")
 
@@ -643,7 +647,7 @@ function App() {
       obtenerReportes();
 
     } catch (error) {
-      setError("No se pudo registrar el reporte")
+      setError(error.message || "No se pudo registrar el reporte")
       console.error(error)
     }
   }
