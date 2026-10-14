@@ -22,6 +22,16 @@ L.Icon.Default.mergeOptions({
   shadowUrl: sombraMarcador
 })
 
+const iconoAmbiental = L.icon({
+  iconUrl: iconoMarcador,
+  iconRetinaUrl: iconoMarcador2x,
+  shadowUrl: sombraMarcador,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+})
+
 const CENTRO_MANRIQUE = [6.263, -75.565]
 
 function CentrarMapa({ reportes }) {
@@ -108,6 +118,7 @@ function Mapa({ reportes = [] }) {
               Number(reporte.latitud),
               Number(reporte.longitud)
             ]}
+            icon={iconoAmbiental}
           >
             <Popup>
               <div>
