@@ -447,7 +447,7 @@ function App() {
       setTimeout(() => {
         setModoAdmin(true)
         setTransicionAdmin(null)
-        window.location.href = "/admin"
+        navegar("/admin")
       }, 1800)
 
     } else {
